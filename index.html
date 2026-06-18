@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zineb Belhaj | Premium Full Stack Portfolio</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Discover the premium portfolio of Zineb Belhaj, a Full Stack Developer specializing in Laravel, React, and AI-powered applications. Blending technology with Moroccan elegance.">
+  <meta name="keywords" content="Zineb Belhaj, Full Stack Developer, Laravel Developer, React, Web Development Morocco, Portfolio, AI Explorer">
+  <meta name="author" content="Zineb Belhaj">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Zineb Belhaj | Premium Full Stack Portfolio">
+  <meta property="og:description" content="Discover high-end web applications, interactive interfaces, and innovative digital solutions crafted by Zineb Belhaj.">
+  <meta property="og:image" content="assets/images/portrait.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Zineb Belhaj | Premium Full Stack Portfolio">
+  <meta property="twitter:description" content="Discover high-end web applications, interactive interfaces, and innovative digital solutions crafted by Zineb Belhaj.">
+  <meta property="twitter:image" content="assets/images/portrait.png">
+
+  <!-- Icons & Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="overflow: hidden;"> <!-- Overflow is disabled initially to lock scrolling while loader displays -->
+
+  <!-- SVG Gradient Definitions for Circles and Badges -->
+  <svg width="0" height="0" style="position: absolute;">
+    <defs>
+      <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#D4AF37" />
+        <stop offset="100%" stop-color="#8B5CF6" />
+      </linearGradient>
+      <linearGradient id="goldGradientLight" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#B8860B" />
+        <stop offset="100%" stop-color="#6D28D9" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Interactive Pointer Glow Circle -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Canvas Particle Background -->
+  <canvas id="particles-canvas" class="canvas-bg" aria-hidden="true"></canvas>
+
+  <!-- Repeating Moroccan Pattern Overlay -->
+  <div class="zellige-overlay" aria-hidden="true"></div>
+
+  <!-- PREMIUM LOADING SCREEN -->
+  <div id="loader" role="status" aria-live="polite">
+    <div class="loader-zellige">
+      <!-- Vector Moroccan 8-pointed star loader -->
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 0 L48 24 L72 32 L48 40 L40 64 L32 40 L8 32 L32 24 Z" stroke="#D4AF37" stroke-width="2"/>
+        <path d="M40 16 L44 28 L56 32 L44 36 L40 48 L36 36 L24 32 L36 28 Z" stroke="#8B5CF6" stroke-width="1.5"/>
+        <circle cx="40" cy="40" r="3" fill="#D4AF37"/>
+      </svg>
+    </div>
+    <div class="loader-title">
+      <span>Zineb Belhaj</span>
+    </div>
+    <div class="loader-tagline">Creativity Meets Technology</div>
+    <div class="loader-progress">
+      <div class="loader-progress-bar"></div>
+    </div>
+  </div>
+
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <a href="#hero" class="logo" aria-label="Zineb Belhaj Home">
+      <svg class="logo-star" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 0 L48 24 L72 32 L48 40 L40 64 L32 40 L8 32 L32 24 Z" stroke="#D4AF37" stroke-width="3" fill="none"/>
+      </svg>
+      <span>Zineb.B</span>
+    </a>
+    
+    <nav aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-right">
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
+        <i class="fas fa-sun" aria-hidden="true"></i>
+      </button>
+      <button class="mobile-nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN STRUCTURE -->
+  <main>
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="reveal">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fas fa-circle" aria-hidden="true"></i>
+          <span>Available for New Projects</span>
+        </div>
+        <h1 class="hero-title">
+          Hi, I'm <br><span>Zineb Belhaj</span>
+        </h1>
+        <div class="typing-container">
+          <span class="typed-text"></span>
+        </div>
+        <p class="hero-desc">
+          A passionate Full Stack Developer focused on crafting premium web architectures, intelligent solutions, and clean interactive digital designs where Moroccan elegance meets state-of-the-art tech.
+        </p>
+        <div class="hero-actions">
+          <a href="assets/cv/Cv zineb belhaj portfolio.pdf" download class="btn btn-primary" aria-label="Download Curriculum Vitae">
+            <i class="fas fa-download" aria-hidden="true"></i> Download CV
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            Get In Touch <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="portrait-card-bg"></div>
+        <div class="portrait-frame glass-panel">
+          <div class="portrait-glow-corner top-left"></div>
+          <img src="assets/images/portrait.png" alt="Zineb Belhaj - Professional Avatar Portrait" class="portrait-img">
+          <div class="portrait-glow-corner bottom-right"></div>
+        </div>
+      </div>
+      <div class="hero-decorations" aria-hidden="true"></div>
+    </section>
+
+    <!-- 2. ABOUT ME & STATS -->
+    <section id="about" class="reveal">
+      <div class="about-left">
+        <span class="section-subtitle">Who Am I?</span>
+        <h2 class="section-title">Crafting Elegant Code</h2>
+        <p style="margin-top: 25px;">
+          I'm a 22-year-old Full Stack Developer based in Morocco, passionate about building responsive, functional, and highly polished digital applications. My fascination with technology began with structural curiosity and quickly evolved into standard specializations in frontend user interfaces, backend logic systems, and intelligent APIs.
+        </p>
+        <p>
+          I thrive on translating complex human issues into intuitive software designs. Driven by details, optimism, and robust architecture, I continuously adapt and explore new boundaries across the AI and Web systems landscaping.
+        </p>
+        <div class="about-accent-quote">
+          "Building digital experiences where creativity meets technology."
+        </div>
+      </div>
+
+      <!-- Statistics layout -->
+      <div class="about-right-grid">
+        <div class="stat-card glass-panel">
+          <div class="stat-icon"><i class="fas fa-cubes" aria-hidden="true"></i></div>
+          <div class="stat-number" data-target="15" data-suffix="+">0</div>
+          <div class="stat-label">Projects Built</div>
+        </div>
+        <div class="stat-card glass-panel">
+          <div class="stat-icon"><i class="fas fa-laptop-code" aria-hidden="true"></i></div>
+          <div class="stat-number" data-target="20" data-suffix="+">0</div>
+          <div class="stat-label">Technologies</div>
+        </div>
+        <div class="stat-card glass-panel">
+          <div class="stat-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
+          <div class="stat-number" data-target="3" data-suffix="+">0</div>
+          <div class="stat-label">Years Learning</div>
+        </div>
+        <div class="stat-card glass-panel">
+          <div class="stat-icon"><i class="fas fa-heart" aria-hidden="true"></i></div>
+          <div class="stat-number" data-target="100" data-suffix="%">0</div>
+          <div class="stat-label">Passion</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SKILLS SECTION -->
+    <section id="skills" class="reveal">
+      <div class="section-header">
+        <span class="section-subtitle">My Toolbox</span>
+        <h2 class="section-title">Core Expertise</h2>
+      </div>
+
+      <div class="skills-orbit-container">
+        <!-- Center Interactive Orbit Stack -->
+        <div class="orbit-wrapper" aria-label="Interactive skills orbiting system">
+          <div class="orbit-center">ZB</div>
+          <div class="orbit-ring orbit-ring-1" aria-hidden="true"></div>
+          <div class="orbit-ring orbit-ring-2" aria-hidden="true"></div>
+          
+          <div class="orbit-track" aria-hidden="true">
+            <!-- Ring 1 Elements (React, Laravel, Node.js) -->
+            <div class="orbit-node node-react" title="React.js">
+              <i class="fab fa-react"></i>
+              <span>React</span>
+            </div>
+            <div class="orbit-node node-laravel" title="Laravel">
+              <i class="fab fa-laravel"></i>
+              <span>Laravel</span>
+            </div>
+            <div class="orbit-node node-node" title="Node.js">
+              <i class="fab fa-node-js"></i>
+              <span>NodeJS</span>
+            </div>
+            
+            <!-- Ring 2 Elements (MySQL, MongoDB, Git) -->
+            <div class="orbit-node node-mysql" title="MySQL Database">
+              <i class="fas fa-database"></i>
+              <span>MySQL</span>
+            </div>
+            <div class="orbit-node node-mongo" title="MongoDB">
+              <i class="fas fa-leaf"></i>
+              <span>MongoDB</span>
+            </div>
+            <div class="orbit-node node-git" title="Git Version Control">
+              <i class="fab fa-git-alt"></i>
+              <span>Git</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Extra circular skill bars -->
+        <div class="skills-extra">
+          <h3 class="skills-extra-title">Proficiency</h3>
+          
+          <div class="skills-grid">
+            <div class="skill-circular-item">
+              <div class="skill-circle-svg-wrapper">
+                <svg viewBox="0 0 90 90">
+                  <circle class="circle-bg" cx="45" cy="45" r="40" />
+                  <circle class="circle-progress" cx="45" cy="45" r="40" />
+                </svg>
+                <div class="skill-circle-value" data-val="95">95%</div>
+              </div>
+              <span class="skill-label">HTML5 / CSS3</span>
+            </div>
+
+            <div class="skill-circular-item">
+              <div class="skill-circle-svg-wrapper">
+                <svg viewBox="0 0 90 90">
+                  <circle class="circle-bg" cx="45" cy="45" r="40" />
+                  <circle class="circle-progress" cx="45" cy="45" r="40" />
+                </svg>
+                <div class="skill-circle-value" data-val="90">90%</div>
+              </div>
+              <span class="skill-label">React.js</span>
+            </div>
+
+            <div class="skill-circular-item">
+              <div class="skill-circle-svg-wrapper">
+                <svg viewBox="0 0 90 90">
+                  <circle class="circle-bg" cx="45" cy="45" r="40" />
+                  <circle class="circle-progress" cx="45" cy="45" r="40" />
+                </svg>
+                <div class="skill-circle-value" data-val="85">85%</div>
+              </div>
+              <span class="skill-label">Laravel / PHP</span>
+            </div>
+
+            <div class="skill-circular-item">
+              <div class="skill-circle-svg-wrapper">
+                <svg viewBox="0 0 90 90">
+                  <circle class="circle-bg" cx="45" cy="45" r="40" />
+                  <circle class="circle-progress" cx="45" cy="45" r="40" />
+                </svg>
+                <div class="skill-circle-value" data-val="80">80%</div>
+              </div>
+              <span class="skill-label">NodeJS / JS</span>
+            </div>
+          </div>
+
+          <!-- Tools Section Badges -->
+          <div class="skill-category-badges">
+            <div class="skill-badge"><i class="fab fa-git-alt" aria-hidden="true"></i> Git</div>
+            <div class="skill-badge"><i class="fab fa-github" aria-hidden="true"></i> GitHub</div>
+            <div class="skill-badge"><i class="fab fa-wordpress" aria-hidden="true"></i> WordPress</div>
+            <div class="skill-badge"><i class="fab fa-figma" aria-hidden="true"></i> Figma</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. EDUCATION & TIMELINE -->
+    <section id="journey" class="reveal">
+      <div class="section-header">
+        <span class="section-subtitle">My Progress</span>
+        <h2 class="section-title">Journey & Education</h2>
+      </div>
+
+      <div class="timeline" aria-label="Education and Career timeline">
+        
+        <!-- Timeline Item 2023 -->
+        <div class="timeline-item left">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card glass-panel">
+            <span class="timeline-year">2023</span>
+            <h4>Began Specialization</h4>
+            <p>Initiated formal study and deep technical dive into Full Stack Web Systems, mastering foundational database layouts and core backend models.</p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2024 -->
+        <div class="timeline-item right">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card glass-panel">
+            <span class="timeline-year">2024</span>
+            <h4>Freelancing & Projects</h4>
+            <p>Developed dynamic academic resources and custom client projects. Solidified practical experience with Laravel systems, APIs, and modern JS layouts.</p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2025 -->
+        <div class="timeline-item left">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card glass-panel">
+            <span class="timeline-year">2025</span>
+            <h4>Full Stack Diploma</h4>
+            <p>Graduated successfully with a Diploma in Full Stack Development. Strengthened knowledge in cloud architecture, databases, and DevOps practices.</p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2026 -->
+        <div class="timeline-item right">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card glass-panel">
+            <span class="timeline-year">2026</span>
+            <h4>AI & Innovation</h4>
+            <p>Focusing on building premium digital systems, studying automated artificial intelligence APIs, and developing modern custom interfaces.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. FEATURED PROJECTS -->
+    <section id="projects" class="reveal">
+      <div class="section-header">
+        <span class="section-subtitle">My Creations</span>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+        
+        <!-- Project 1 -->
+        <article class="project-card glass-panel">
+          <div class="project-spotlight"></div>
+          <div class="project-img-wrapper">
+            <img src="assets/images/event-facile.webp" alt="Évènement Facile Platform Mockup" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">Laravel</span>
+              <span class="project-tag">MySQL</span>
+              <span class="project-tag">Bootstrap</span>
+            </div>
+            <h3 class="project-title">Évènement Facile</h3>
+            <p class="project-desc">A premium event planning and reservations dashboard mapping authenticated users, calendars, reservation pipelines, and scheduling lists.</p>
+            <div class="project-links">
+              <a href="javascript:void(0)" class="project-link demo-link"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo</a>
+              <a href="https://github.com/zinebbelhaj" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card glass-panel">
+          <div class="project-spotlight"></div>
+          <div class="project-img-wrapper">
+            <img src="assets/images/naturellia.webp" alt="Naturellia Agriculture Dashboard Mockup" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">Laravel</span>
+              <span class="project-tag">React</span>
+              <span class="project-tag">MySQL</span>
+            </div>
+            <h3 class="project-title">Naturellia</h3>
+            <p class="project-desc">A smart digital platform focused on crop management, containing plant analytics dashboard, data filters, and recommendation logic.</p>
+            <div class="project-links">
+              <a href="javascript:void(0)" class="project-link demo-link"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo</a>
+              <a href="https://github.com/zinebbelhaj" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card glass-panel">
+          <div class="project-spotlight"></div>
+          <div class="project-img-wrapper">
+            <img src="assets/images/interior-ai.webp" alt="Interior AI Decorator Mockup" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">NodeJS</span>
+              <span class="project-tag">AI APIs</span>
+            </div>
+            <h3 class="project-title">AI Interior Decorator</h3>
+            <p class="project-desc">AI-powered interior decoration assistant facilitating room analysis, spatial inspirations, dynamic dashboards, and layout configurations.</p>
+            <div class="project-links">
+              <a href="javascript:void(0)" class="project-link demo-link"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo</a>
+              <a href="https://github.com/zinebbelhaj" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card glass-panel">
+          <div class="project-spotlight"></div>
+          <div class="project-img-wrapper">
+            <img src="assets/images/booking.webp" alt="Event Booking Website Mockup" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">Laravel</span>
+              <span class="project-tag">MongoDB</span>
+            </div>
+            <h3 class="project-title">Event Booking System</h3>
+            <p class="project-desc">High-performance online ticket booking service built on MongoDB, featuring clean checkout flows, seat maps, and secure ticket passes.</p>
+            <div class="project-links">
+              <a href="javascript:void(0)" class="project-link demo-link"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo</a>
+              <a href="https://github.com/zinebbelhaj" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5 (AgriSmart) -->
+        <article class="project-card glass-panel">
+          <div class="project-spotlight"></div>
+          <div class="project-img-wrapper">
+            <img src="assets/images/agrismart.webp" alt="AgriSmart Platform Mockup" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">Laravel 12</span>
+              <span class="project-tag">React 19</span>
+              <span class="project-tag">SQLite</span>
+              <span class="project-tag">Tailwind</span>
+            </div>
+            <h3 class="project-title">AgriSmart</h3>
+            <p class="project-desc">A smart agricultural portal connecting farmers, buyers, and agricultural engineers, featuring crop management tracking, product marketplaces, and expert consultation services.</p>
+            <div class="project-links">
+              <a href="javascript:void(0)" class="project-link demo-link"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo</a>
+              <a href="https://github.com/zinebbelhaj" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6 (Binalogy) -->
+        <article class="project-card glass-panel">
+          <div class="project-spotlight"></div>
+          <div class="project-img-wrapper">
+            <img src="assets/images/binalogy.webp" alt="Binalogy SaaS Platform Mockup" class="project-img">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="project-tag">Next.js</span>
+              <span class="project-tag">Laravel</span>
+              <span class="project-tag">NodeJS</span>
+              <span class="project-tag">MongoDB</span>
+              <span class="project-tag">Lucia Auth</span>
+            </div>
+            <h3 class="project-title">Binalogy</h3>
+            <p class="project-desc">SaaS programming education platform for schools, featuring interactive Scratch runners for primary pupils and Python editors for high school students, integrated with badges and gamified XP progression.</p>
+            <div class="project-links">
+              <a href="javascript:void(0)" class="project-link demo-link"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo</a>
+              <a href="https://github.com/zinebbelhaj" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source Code</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 6. ACHIEVEMENTS -->
+    <section id="achievements" class="reveal">
+      <div class="section-header">
+        <span class="section-subtitle">Credentials</span>
+        <h2 class="section-title">Milestones & Achievements</h2>
+      </div>
+
+      <div class="achievements-grid">
+        <div class="achievement-card glass-panel">
+          <div class="achievement-icon" aria-hidden="true"><i class="fas fa-award"></i></div>
+          <h3>Full Stack Diploma</h3>
+          <p>Successfully completed extensive specialized training in Full Stack systems development, covering modern web architectures and relational models.</p>
+        </div>
+
+        <div class="achievement-card glass-panel">
+          <div class="achievement-icon" aria-hidden="true"><i class="fas fa-project-diagram"></i></div>
+          <h3>Academic Projects</h3>
+          <p>Designed and presented multiple web solutions addressing scheduling, agriculture, and AI design queries to educational juries.</p>
+        </div>
+
+        <div class="achievement-card glass-panel">
+          <div class="achievement-icon" aria-hidden="true"><i class="fas fa-infinity"></i></div>
+          <h3>Continuous Learning</h3>
+          <p>Consistently learning modern structures like Next.js, Tailwind custom patterns, cloud integrations, and vector AI models.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. MOROCCAN IDENTITY DESIGN INSPIRATION -->
+    <section id="moroccan-inspiration" class="reveal">
+      <div class="inspiration-container glass-panel">
+        <div class="zellige-border-top" aria-hidden="true"></div>
+        <span class="inspiration-flag" aria-hidden="true">🇲🇦</span>
+        <h2 class="inspiration-title">Inspired by Morocco</h2>
+        <p class="inspiration-text">
+          "Combining modern technology with creativity, culture, and innovation to build meaningful digital experiences that solve real-world problems."
+        </p>
+        <div class="zellige-border-bottom" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- 8. CONTACT SECTION & CHECKLISTS -->
+    <section id="contact" class="reveal">
+      <div class="section-header">
+        <span class="section-subtitle">Let's Connect</span>
+        <h2 class="section-title">Build Together</h2>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="contact-info-panel">
+          <h3>Let's build something amazing together</h3>
+          <p>I am always open to exploring new engineering concepts, full stack web collaborations, and freelance development requests.</p>
+          
+          <div class="contact-methods">
+            
+            <div class="contact-method-card glass-panel">
+              <div class="contact-method-icon" aria-hidden="true"><i class="fas fa-envelope"></i></div>
+              <div class="contact-method-details">
+                <h4>Email</h4>
+                <a href="mailto:zinebbelhaj62@gmail.com">zinebbelhaj62@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-method-card glass-panel">
+              <div class="contact-method-icon" aria-hidden="true"><i class="fab fa-github"></i></div>
+              <div class="contact-method-details">
+                <h4>GitHub</h4>
+                <a href="https://github.com/zinebbelhaj" target="_blank" rel="noopener noreferrer">github.com/zinebbelhaj</a>
+              </div>
+            </div>
+
+            <div class="contact-method-card glass-panel">
+              <div class="contact-method-icon" aria-hidden="true"><i class="fab fa-linkedin-in"></i></div>
+              <div class="contact-method-details">
+                <h4>LinkedIn</h4>
+                <a href="https://linkedin.com/in/zinebbelhaj" target="_blank" rel="noopener noreferrer">linkedin.com/in/zinebbelhaj</a>
+              </div>
+            </div>
+
+            <div class="contact-method-card glass-panel">
+              <div class="contact-method-icon" aria-hidden="true"><i class="fab fa-instagram"></i></div>
+              <div class="contact-method-details">
+                <h4>Instagram</h4>
+                <a href="https://instagram.com/zinabeelhj" target="_blank" rel="noopener noreferrer">@zinabeelhj</a>
+              </div>
+            </div>
+
+            <div class="contact-method-card glass-panel">
+              <div class="contact-method-icon" aria-hidden="true"><i class="fab fa-telegram-plane"></i></div>
+              <div class="contact-method-details">
+                <h4>Telegram</h4>
+                <a href="https://t.me/zinebbelhaj" target="_blank" rel="noopener noreferrer">t.me/zinebbelhaj</a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Availability statuses -->
+          <div class="availability-checklist">
+            <h4 class="availability-title">Available for:</h4>
+            <div class="availability-grid">
+              <div class="availability-item"><i class="fas fa-check-circle" aria-hidden="true"></i> Internships</div>
+              <div class="availability-item"><i class="fas fa-check-circle" aria-hidden="true"></i> Freelance Projects</div>
+              <div class="availability-item"><i class="fas fa-check-circle" aria-hidden="true"></i> Collaborations</div>
+              <div class="availability-item"><i class="fas fa-check-circle" aria-hidden="true"></i> Full-Time Roles</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form id="contact-form" class="contact-form glass-panel" novalidate>
+          
+          <div class="form-group">
+            <input type="text" id="name" class="form-input" placeholder=" " required>
+            <label for="name" class="form-label">Name</label>
+          </div>
+
+          <div class="form-group">
+            <input type="email" id="email" class="form-input" placeholder=" " required>
+            <label for="email" class="form-label">Email Address</label>
+          </div>
+
+          <div class="form-group">
+            <input type="text" id="subject" class="form-input" placeholder=" " required>
+            <label for="subject" class="form-label">Subject</label>
+          </div>
+
+          <div class="form-group">
+            <textarea id="message" class="form-input" placeholder=" " required></textarea>
+            <label for="message" class="form-label">Your Message</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-send" aria-label="Send message button">
+            <span>Send Message</span> <i class="fas fa-paper-plane" aria-hidden="true"></i>
+          </button>
+          
+          <div id="form-feedback" class="form-feedback" role="alert" aria-live="assertive"></div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-logo">Zineb Belhaj</div>
+      <div class="social-links">
+        <a href="https://github.com/zinebbelhaj" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/zinebbelhaj" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://instagram.com/zinabeelhj" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
+        <a href="https://t.me/zinebbelhaj" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Telegram Account"><i class="fab fa-telegram-plane"></i></a>
+        <a href="mailto:zinebbelhaj62@gmail.com" class="social-icon" aria-label="Email Zineb"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <span>Zineb Belhaj &copy; 2026</span>
+      <span>Made with passion in Morocco 🇲🇦</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
